@@ -7,7 +7,7 @@ transform:
   image_pull_secrets:
     - k8scc01covidacr-registry-connection
   cmd:
-    - "/main.sh"
+    - "/pfs/git/main.sh"
     - "--src"
     - "/pfs/git/src/"
     - "--params"
@@ -17,8 +17,8 @@ transform:
     - "--output"
     - "/pfs/out"
 resource_requests:
-  memory: "6G"
-  cpu: 3
+  memory: "3G"
+  cpu: 1
 parallelism_spec:
   constant: 100  # use N computers
 output_branch: 2020-04-24_01
